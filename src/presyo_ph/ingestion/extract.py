@@ -1,20 +1,19 @@
-import requests
+import zipfile
 
-BASE_URL = "https://microdata.worldbank.org/api/tables"
+from presyo_ph.config import RAW_FILE, EXTRACTED_DIR, EXTRACTED_FILE
 
-metadata_url = f"{BASE_URL}/info/fcv/wld_2021_rtfp_v02_m"
 
-response = requests.get(
-    metadata_url,
-    params={"data_dictionary": "true"},
-    timeout=30
-)
+def extract_food_prices():
+    EXTRACTED_DIR.mkdir(parents=True, exist_ok=True)
 
-response.raise_for_status()
+    with zipfile.ZipFile(RAW_FILE, "r") as archive:
+        csv_filename = archive.namelist()[0]
 
-metadata = response.json()["result"]
+        with (
+            archive.open(csv_filename) as source,
+            EXTRACTED_FILE.open("wb") as target
+        ):
+            while chunk := source.read(1024 * 1024):
+                _ = target.write(chunk)
 
-print("Total observations:", metadata["count"])
-
-for feature in metadata["metadata"]["features"]:
-    print(feature["feature_name"], "-", feature["feature_label"])
+    return EXTRACTED_FILE
