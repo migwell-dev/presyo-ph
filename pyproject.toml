@@ -1,18 +1,18 @@
 [project]
 name = "presyo-ph"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-authors = [
-    { name = "migwell-dev", email = "miggyfortuna0413@gmail.com" }
-]
-requires-python = ">=3.11"
+description = "Philippine Food Price Analytics & Forecasting"
+requires-python = ">=3.12"
 dependencies = [
-    "delta-spark==4.1.0",
     "pandas>=3.1.0",
-    "pyspark==4.1.0",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
+]
+
+[project.optional-dependencies]
+local = [
+    "pyspark==4.1.0",
+    "delta-spark==4.1.0",
 ]
 
 [project.scripts]
@@ -21,6 +21,13 @@ presyo-ph = "presyo_ph:main"
 [build-system]
 requires = ["uv_build>=0.12.0,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "presyo_ph"
+module-root = "src"
+
+[tool.databricks.environment]
+environment_version = "5"
 
 [dependency-groups]
 dev = [
