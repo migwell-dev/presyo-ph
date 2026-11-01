@@ -34,3 +34,11 @@ EXTRACTED_FILE = EXTRACTED_DIR / "food_prices_ph.csv"
 BRONZE_PATH = PROJECT_ROOT / "data" / "delta" / "bronze" / "food_prices"
 
 BRONZE_TABLE = "workspace.bronze.food_prices"
+
+# =========================
+# Silver Layer Configuration
+# =========================
+
+SILVER_PATH = PROJECT_ROOT / "data" / "delta" / "silver" / "food_prices"
+
+SILVER_TABLE = "workspace.silver.food_prices"
