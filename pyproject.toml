@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Philippine Food Price Analytics & Forecasting"
 requires-python = ">=3.12"
 dependencies = [
-    "pandas>=3.1.0",
+    "fg-data-profiling>=4.20.0",
+    "pandas==2.3.3",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
 ]

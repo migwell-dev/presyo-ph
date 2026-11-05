@@ -42,3 +42,16 @@ BRONZE_TABLE = "workspace.bronze.food_prices"
 SILVER_PATH = PROJECT_ROOT / "data" / "delta" / "silver" / "food_prices"
 
 SILVER_TABLE = "workspace.silver.food_prices"
+
+# =========================
+# Gold Layer Configuration
+# =========================
+
+GOLD_PATH = PROJECT_ROOT / "data" / "delta" / "gold"
+
+GOLD_TABLES = {
+    "market_monthly_prices": "workspace.gold.market_monthly_prices",
+    "regional_monthly_prices": "workspace.gold.regional_monthly_prices",
+    "national_monthly_prices": "workspace.gold.national_monthly_prices",
+    "national_commodity_growth": "workspace.gold.national_commodity_growth",
+}
