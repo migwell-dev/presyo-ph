@@ -54,4 +54,13 @@ GOLD_TABLES = {
     "regional_monthly_prices": "workspace.gold.regional_monthly_prices",
     "national_monthly_prices": "workspace.gold.national_monthly_prices",
     "national_commodity_growth": "workspace.gold.national_commodity_growth",
+    "rice_forecasts": "workspace.gold.rice_forecasts",
+    "beans_forecasts": "workspace.gold.beans_forecasts",
+    "cabbage_forecasts": "workspace.gold.cabbge_forecasts",
+    "carrots_forecasts": "workspace.gold.carrots_forecasts",
+    "eggs_forecasts": "workspace.gold.eggs_forecasts",
+    "garlic_forecasts": "workspace.gold.garlic_forecasts",
+    "onions_forecasts": "workspace.gold.onions_forecasts",
+    "potatoes_forecasts": "workspace.gold.potatoes_forecasts",
+    "tomatoes_forecasts": "workspace.gold.tomatoes_forecasts",
 }
