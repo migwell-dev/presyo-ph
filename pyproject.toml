@@ -6,6 +6,7 @@ requires-python = ">=3.12"
 dependencies = [
     "fg-data-profiling>=4.20.0",
     "pandas==2.3.3",
+    "pandas-stubs>=3.1.0.261029",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
 ]
@@ -14,6 +15,12 @@ dependencies = [
 local = [
     "pyspark==4.1.0",
     "delta-spark==4.1.0",
+]
+
+ml = [
+    "scikit-learn>=1.7.0",
+    "statsmodels>=0.14.0",
+    "xgboost>=3.0.0",
 ]
 
 [project.scripts]
