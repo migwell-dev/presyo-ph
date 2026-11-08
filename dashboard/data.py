@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
 from presyo_ph.spark import get_spark_session
 
 from presyo_ph.medallion.gold import load_gold_table
@@ -25,9 +26,22 @@ def load_gold_pandas(table_name: str) -> pd.DataFrame:
 
 
 def load_forecasts(commodity: str) -> pd.DataFrame:
-    table_name = f"{commodity}_forecasts"
+    spark = get_spark_session()
 
-    return load_gold_pandas(table_name)
+    df = load_gold_table(
+        spark,
+        f"{commodity}_forecasts",
+    )
+
+    df = df.withColumn(
+        "generated_at",
+        F.date_format(
+            F.col("generated_at"),
+            "yyyy-MM-dd HH:mm:ss",
+        ),
+    )
+
+    return df.toPandas()
 
 
 def get_commodities() -> list[str]:
