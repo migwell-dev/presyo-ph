@@ -9,6 +9,8 @@ dependencies = [
     "pandas-stubs>=3.1.0.261029",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
+    "streamlit>=1.40.0",
+    "plotly>=5.24.0",
 ]
 
 [project.optional-dependencies]
