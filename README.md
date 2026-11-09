@@ -112,7 +112,7 @@ ARIMA(1,1,1) performed better than the naive baseline across the evaluated avera
 
 The model is included as an introductory forecasting component. Its predictions are not intended to serve as real-time market price estimates.
 
-[Model Evaluation](docs/images/model-evaluation.png)
+![Model Evaluation](docs/images/model-evaluation.png)
 
 ## Technology Stack
 
