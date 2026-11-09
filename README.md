@@ -23,7 +23,7 @@ Presyo-PH addresses this by building a reproducible data pipeline that processes
 
 ## Data Source
 
-**Source:** [World Bank Microdata – Monthly Food Price Estimates by Product and Market](https://microdata.worldbank.org/catalog/6172)
+**Source:**
 Andrée, B. P. J. (2021). Monthly food price estimates by product and market (Version 2025-11-24). PHL_2021_RTFP_v02_M. Washington, DC: World Bank Microdata Library. https://doi.org/10.48529/2ZH0-JF55
 
 The project uses the Philippine subset of the dataset.
